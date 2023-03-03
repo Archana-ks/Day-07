@@ -44,7 +44,7 @@ request.open("GET","https://restcountries.com/v3.1/all");
 request.send();
 request.onload=function(){
 var result=JSON.parse(request.response);
-console.log(result.filter((value)=>value.population>200000));
+console.log(result.filter((value)=>value.population < 200000));
 }
 
 
